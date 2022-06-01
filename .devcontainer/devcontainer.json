@@ -1,0 +1,29 @@
+{
+	"name": "Raspberry Pi Pico C/C++ SDK",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"marus25.cortex-debug"
+			]
+		}
+	},
+
+	"updateContentCommand": "ln -s ${PICO_SDK_PATH}/external/pico_sdk_import.cmake ${containerWorkspaceFolder}/pico_sdk_import.cmake",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}

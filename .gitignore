@@ -1,0 +1,5 @@
+/*/.docker/.buildNodeID
+/build/**
+/pico_sdk_import.cmake
+/.vscode/.cortex-debug.peripherals.state.json
+/.vscode/.cortex-debug.registers.state.json

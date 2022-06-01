@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "test",                                     // Reader-friendly name
+            "type": "cortex-debug",
+            "executable": "${workspaceFolder}/build/test.elf",  // ELF file
+            "armToolchainPath": "/usr/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "request": "launch",
+            "servertype": "jlink",
+            "serverpath": "/opt/SEGGER/JLink/JLinkGDBServer",
+            "ipAddress": "192.168.1.107",                       // IP address of the J-Link Remote Server
+            "device": "RP2040_M0_0",
+            "svdFile": "/apps/pico-sdk/src/rp2040/hardware_regs/rp2040.svd",
+            "interface": "swd"
+        }
+    ]
+}
